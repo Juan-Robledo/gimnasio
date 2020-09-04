@@ -34,6 +34,7 @@ let $box = document.querySelector("div");
 let $formConsulta = document.querySelector("#formConsulta");
 $formConsulta.addEventListener("submit",function(e){
     e.preventDefault();
+    let mensaje = document.createElement("p");
     let nombreConsulta = $formConsulta.querySelector("#nombre").value;
     console.log(nombreConsulta);
     let hoy = new Date();
@@ -47,16 +48,15 @@ $formConsulta.addEventListener("submit",function(e){
     console.log(fechaVencimiento);
     console.log(nombre);
     if(fechaVencimiento > hoy){
-        let mensaje = document.createElement("p");
         mensaje.innerHTML = "Te encuentras habilitado";
         $box.after(mensaje);
         console.log("estas habilitado");
     }else{
-        let mensaje = document.createElement("p");
         mensaje.innerHTML = "Tienes vencida tu suscripcion";
         $box.after(mensaje);
         console.log("Tienes vencida tu suscripcion");
     }
+    $formConsulta.reset();
 });
 
 
@@ -80,4 +80,5 @@ $formRegistro.addEventListener("submit",function(e){
     let nuevoMiembro = new agregarMiembros ($nombre,$dni,$email,$fecha);
     listaMiembros.push(nuevoMiembro);
     console.log(listaMiembros);
+    $formRegistro.reset();
 });
