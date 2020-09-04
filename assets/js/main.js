@@ -27,31 +27,31 @@ let listaMiembros = [
         nombre: "María Pérez",
         dni: 14714714,
         email: "mariaperez@gmail.com",
-        vencimiento: "2020-09-10"
+        vencimiento: new Date(2020,09,10)
     }
     ];
 let $box = document.querySelector("div");
+
 let $formConsulta = document.querySelector("#formConsulta");
 $formConsulta.addEventListener("submit",function(e){
     e.preventDefault();
-    let mensaje = document.createElement("p");
+
     let nombreConsulta = $formConsulta.querySelector("#nombre").value;
     console.log(nombreConsulta);
     let hoy = new Date();
     console.log(hoy);
-    let nombre = listaMiembros.filter(function(integrante){
+    let nombre = listaMiembros.find(function(integrante){
         return integrante.nombre == nombreConsulta;
-    })
-    let fechaVencimiento = listaMiembros.filter(function(integrante){
-        return integrante.vencimiento > hoy;
-    })
-    console.log(fechaVencimiento);
-    console.log(nombre);
-    if(fechaVencimiento > hoy){
+    });
+    console.log(nombre.vencimiento);
+    if(nombre.vencimiento >= hoy){
+        let mensaje = document.createElement("p");
         mensaje.innerHTML = "Te encuentras habilitado";
         $box.after(mensaje);
         console.log("estas habilitado");
+        console.log("estas habilitado");
     }else{
+        let mensaje = document.createElement("p");
         mensaje.innerHTML = "Tienes vencida tu suscripcion";
         $box.after(mensaje);
         console.log("Tienes vencida tu suscripcion");
