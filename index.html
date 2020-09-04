@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gimnasio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <form id="formulario">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre">
-        <label for="dni">Dni</label>
-        <input type="tel" name="dni" id="dni">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <label for="fecha">Vencimiento</label>
-        <input type="date" name="fecha" id="fecha">
-        <input type="submit" value="Registrarte">
-    </form>
+    <div class="encabezado">
+        <h1>Gimnasio</h1>
+    </div>
+    <div class="box">
+        <form id="formConsulta" class="formulario">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+            <input type="submit" value="Ingresar" class="btn">
+        </form>
+        <form id="formRegistro" class="formulario">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" class="entrada">
+            <label for="dni">Dni</label>
+            <input type="number" name="dni" id="dni" class="entrada">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="entrada">
+            <label for="fecha">Vencimiento</label>
+            <input type="date" name="fecha" id="fecha" class="entrada">
+            <input type="submit" value="Registrarte" class="btn">
+        </form>
+    </div>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
