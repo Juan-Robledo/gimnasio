@@ -1,19 +1,25 @@
 html{
     box-sizing: border-box;
-    max-width: 1000px;
     margin: auto;
 }
 body{
     background-color: #222222;
     color: #ffffff;
+
 }
 .encabezado{
+    margin-bottom: 10px;
+    background-image: url(../image/gym.jpg);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem;
     color: #FA711B;
     text-align: center;
 }
+.encabezado h1{
+    margin: 0;
+}
 .box{
+    padding-top: 20px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -46,4 +52,10 @@ input{
     border: none;
     border-radius: 2px;
     font-size: 1.3rem;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    color: #FA711B;
+    margin-left: 150px;
 }

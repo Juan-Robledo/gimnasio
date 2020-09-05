@@ -3,31 +3,31 @@ let listaMiembros = [
         nombre: "Juan Pérez",
         dni: 12312312,
         email: "juanperez@gmail.com",
-        vencimiento: "2020-09-10"
+        vencimiento: new Date(2020,09,10, 00,00)
     },
     {
         nombre: "Manjula Pérez",
         dni: 36936936,
         email: "manjulaperez@gmail.com",
-        vencimiento: "2020-09-10"
+        vencimiento: new Date(2020,09,10, 00,00)
     },
     {
         nombre: "Pablo Pérez",
         dni: 45645645,
         email: "pabloperez@gmail.com",
-        vencimiento: "2020-09-10"
+        vencimiento: new Date(2020,09,10, 00,00)
     },
     {
         nombre: "Cristina Pérez",
         dni: 789789789,
         email: "cristinaperez@gmail.com",
-        vencimiento: "2020-09-10"
+        vencimiento: new Date(2020,09,10, 00,00)
     },
     {
         nombre: "María Pérez",
         dni: 14714714,
         email: "mariaperez@gmail.com",
-        vencimiento: new Date(2020,09,10)
+        vencimiento: new Date(2020,09,10, 00,00)
     }
     ];
 let $box = document.querySelector("div");
@@ -48,7 +48,6 @@ $formConsulta.addEventListener("submit",function(e){
         let mensaje = document.createElement("p");
         mensaje.innerHTML = "Te encuentras habilitado";
         $box.after(mensaje);
-        console.log("estas habilitado");
         console.log("estas habilitado");
     }else{
         let mensaje = document.createElement("p");
